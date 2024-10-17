@@ -1,0 +1,106 @@
+import React from "react";
+import styled from "@emotion/styled";
+
+import FrontendImage from "../images/front.png"
+import BackendImage from "../images/back.png"
+import MobiledImage from "../images/mobile.png"
+import DatabaseImage from "../images/database.png"
+import ClouldImage from "../images/cloud.png"
+
+export default function Services() {
+  
+  const DefaultContainer = styled.section`
+    width: 100%;
+    padding: 50px 0;
+    background-color: #000;
+    box-shadow: 1px 0px 4px #000;
+    color: #fff;
+  `;
+  const Title = styled.div`
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 600;
+  `;
+  const Description = styled.div`
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ccc;
+    margin-top: 1.3rem;
+    margin-bottom: 4.5rem;
+  `;
+  const Body = styled.div`
+    padding: 4rem;
+    margin: auto;
+  `;
+  const Services = styled.section`
+    display: flex;
+  `
+  const AsService = styled.section`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1.5px solid transparent;
+    transition: 1s;
+    &:hover {
+      border-bottom: 1.5px solid var(--primary);
+    }
+  `;
+  const ImgTecnologyLogo = styled.img`
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  `;
+  const TecnologyArea = styled.h4`
+    margin-top: 2rem;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000;
+  `;
+  const Tecnology = styled.p`
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: var(--primary);
+  `;
+
+  return (
+    <DefaultContainer>
+      <Title>Services</Title>
+      <Description>Services that we provide</Description>
+      <Body>
+        <Services>
+          <AsService>
+            <ImgTecnologyLogo src={FrontendImage} />
+            <TecnologyArea>Fontend</TecnologyArea>
+            <Tecnology>HTML-CSS Javascript NextJs NodeJs</Tecnology>
+          </AsService>
+          <AsService>
+            <ImgTecnologyLogo src={BackendImage} />
+            <TecnologyArea>Backend</TecnologyArea>
+            <Tecnology>NodeJs Golang Python</Tecnology>
+          </AsService>
+          <AsService>
+            <ImgTecnologyLogo src={MobiledImage} />
+            <TecnologyArea>Mobile</TecnologyArea>
+            <Tecnology>Flutter Ionic</Tecnology>
+          </AsService>
+          <AsService>
+            <ImgTecnologyLogo src={DatabaseImage} />
+            <TecnologyArea>Database</TecnologyArea>
+            <Tecnology>PostgreSQL Firebase</Tecnology>
+          </AsService>
+          <AsService>
+            <ImgTecnologyLogo src={ClouldImage}/>
+            <TecnologyArea>Cloud</TecnologyArea>
+            <Tecnology>Google Cloud AWS</Tecnology>
+          </AsService>
+        </Services>
+      </Body>
+    </DefaultContainer>
+  );
+}

@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-export default function Button({theTextInside, href}) {
+export default function FocusButton({theTextInside, href}) {
 
     const TheButton = styled.a`
-        display: block;
+        display: inline-block;
         background-color: #000;
         color: var(--primary);
         text-transform: capitalize;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         text-decoration: none;
-        padding: 1rem 3rem;
+        padding: 0.7rem 3rem;
         margin-top: 2rem;
         border-radius: 8px;
         transition: 1.1s;

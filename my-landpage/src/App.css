@@ -9,7 +9,7 @@
     box-sizing: border-box;
     overflow-x: hidden;
     font-size: 10px;
-    font-family: 'Montserrat', Arial;
+    font-family: Arial;
 }
 ::selection{
     color: var(--primary);
