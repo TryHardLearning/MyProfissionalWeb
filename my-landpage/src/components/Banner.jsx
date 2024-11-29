@@ -1,10 +1,34 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { css, keyframes } from '@emotion/react';
 import Button from "./Button";
 
 import myBackground from "../images/bgEl.jpg";
 
 export default function Banner() {
+
+  // Animação para o deslocamento infinito
+  const scrollInfinite = keyframes`
+    0% {
+      margin-left: 0;
+    }
+    20% {
+      margin-left: 0vw;
+    }
+    40% {
+      margin-left: -100vw;
+    }
+    60% {
+      margin-left: -100vw;
+    }
+    80% {
+      margin-left: -200vw;
+    }
+    100% {
+      margin-left: -200vw;
+    }
+  `;
+
   const BannerContainer = styled.section`
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${myBackground});
@@ -17,6 +41,7 @@ export default function Banner() {
   const Sliders = styled.div`
     width: 400vw;
     height: 100%;
+    animation: ${scrollInfinite} 10s linear infinite; 
     transition: 2s;
   `;
   const Slide = styled.div`
@@ -91,41 +116,37 @@ export default function Banner() {
   `;
 
   return (
-    <BannerContainer>
+    <BannerContainer id="banner">
       <Sliders>
         <Slide>
           <Context>
             <PrimaryText>
-              Programming in the best
+            The best solutions for your
               <br />
-              <AccentText>languages</AccentText>
+              <AccentText>business</AccentText>
             </PrimaryText>
-            <SubText>LucasChaosMind</SubText>
-            <Button theTextInside={"Get portifolio"} href={'#'} />
+            <SubText>ArchSoftware</SubText>
+            <Button theTextInside={"Contact me"} href={'https://wa.me/46988301339'} />
           </Context>
         </Slide>
         <Slide>
           <Context>
             <PrimaryText>
-              Programming in the best
+              AI-powered sales and support <br /> automation solutions
               <br />
-              <AccentText>frameworks</AccentText>
+              <AccentText>GPT LLaMA</AccentText>
             </PrimaryText>
-            <SubText>LucasChaosMind</SubText>
+            <SubText>ArchSoftware</SubText>
           </Context>
         </Slide>
         <Slide>
           <Context>
             <PrimaryText>
-              Web Design
+              ERP solution Integrated With
               <br />
-              <AccentText>Frontend - Backend</AccentText>
-              <br />
-              and
-              <br />
-              <AccentText>Mobile</AccentText>
+              <AccentText>Artificial Intelligence</AccentText>
             </PrimaryText>
-            <SubText>LucasChaosMind</SubText>
+            <SubText>ArchSoftware</SubText>
           </Context>
         </Slide>
       </Sliders>
