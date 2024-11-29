@@ -5,6 +5,10 @@ import Banner from './components/Banner';
 import UboutUs from './components/AboutUs';
 import Services from './components/Services';
 import Projects from './components/Projects';
+import OurTeam from './components/OurTeam';
+import WorkWith from './components/WorkWIth';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
       <UboutUs/>
       <Services/>
       <Projects/>
+      <OurTeam/>
+      <WorkWith/>
+      <ContactUs/>
+      <Footer/>
     </div>
   );
 }
