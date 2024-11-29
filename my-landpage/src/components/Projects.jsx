@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import DefaultImage from "../images/code.png"
+import Project from "./Project";
+import AllMyProjects from '../Data';
 
 export default function Projects() {
   const DefaultContainer = styled.section`
@@ -10,16 +12,16 @@ export default function Projects() {
   const Title = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
   `;
   const Description = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    color: #ccc;
-    margin-top: 1.3rem;
+    color: #a0a0a0;
+    margin-top: 1.7rem;
     margin-bottom: 4.5rem;
   `;
   const Body = styled.div`
@@ -110,7 +112,7 @@ export default function Projects() {
     text-transform: capitalize;
   `;
   return (
-    <DefaultContainer>
+    <DefaultContainer id="projects">
       <Title>Our Projects</Title>
       <Description>What we create</Description>
       <Body>
@@ -127,60 +129,16 @@ export default function Projects() {
           </Filters>
         </ProjectContainer>
         <MyProjects>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>My portifolio</ProjectName>
-                <ProjectDescription>Portifolio with my curriculum</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>University</ProjectName>
-                <ProjectDescription>Site for studied HTMl e CSS</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>Medical clinic</ProjectName>
-                <ProjectDescription>Studied flexbox</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>Warehouse In PostgreSQL</ProjectName>
-                <ProjectDescription>Data Engineering</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>User control Java</ProjectName>
-                <ProjectDescription>Java interface integrate a Postgres database</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
-          <ProjectDeveloped>
-            <ImgWrap>
-              <ProjectInfo href="#">
-                <ProjectName>Snack Game</ProjectName>
-                <ProjectDescription>Snack game in Java</ProjectDescription>
-              </ProjectInfo>
-              <ProjectImge src={DefaultImage} />
-            </ImgWrap>
-          </ProjectDeveloped>
+
+          {AllMyProjects.map((project, index) => (
+            <Project
+              key={index}
+              Name={project.Name}
+              Description={project.Description}
+              Link={project.Link}
+            />
+          ))}
+
         </MyProjects>
       </Body>
     </DefaultContainer>
