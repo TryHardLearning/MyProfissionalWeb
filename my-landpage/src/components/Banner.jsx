@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { css, keyframes } from '@emotion/react';
+import { keyframes } from '@emotion/react';
 import Button from "./Button";
 
 import myBackground from "../images/bgEl.jpg";
