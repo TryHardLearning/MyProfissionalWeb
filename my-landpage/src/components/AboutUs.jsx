@@ -12,15 +12,15 @@ export default function UboutUs() {
   const Title = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
   `;
   const Description = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    color: #ccc;
+    color: #a0a0a0;
     margin-top: 1.3rem;
     margin-bottom: 4.5rem;
   `;
@@ -74,27 +74,25 @@ export default function UboutUs() {
   `;
 
   return (
-    <DefaultContainer>
+    <DefaultContainer id="aboutus">
       <Title>About us</Title>
-      <Description>who I am?</Description>
+      <Description>Who we are?</Description>
       <Body>
         <AboutUsContainer>
           <Left>
             <Information>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-              volutpat ullamcorper urna, sit amet vehicula felis vehicula
-              egestas. Ut mattis urna id tempus vestibulum. Vestibulum lacinia
-              eget enim a sagittis. Morbi sed massa eu ligula condimentum
-              aliquet at sed felis. Vivamus ut auctor sem. Cras maximus quis
-              erat a gravida. Duis quam eros, porta sed mauris et, porttitor
-              dapibus purus. Duis sit amet augue vitae sem ultricies pharetra.
-              Aliquam viverra, neque at lacinia volutpat, erat erat suscipit
-              leo, nec tincidunt odio mi eu ligula.
+              At ArchSoftware, we believe in transforming the way businesses operate by harnessing the power of technology. Our journey began as a dynamic collaboration between undergraduate and graduate students who shared a common vision: to redefine technical support and sales processes through the use of AI solutions. <br/><br/>
+
+              We specialize in developing cutting-edge software solutions that integrate AI to automate technical support and optimize ERP systems. Our chatbots are designed not only to reduce costs but also to enhance customer experiences by providing instant, accurate, and efficient responses. Additionally, our solutions enable businesses to gain deep insights into the key issues faced by their customers, empowering them to improve their products and services.<br/><br/>
+
+              Our mission is to empower businesses to focus on what matters most their core business by providing tools that streamline operations, improve decision-making, and optimize resources. With a blend of academic rigor and entrepreneurial spirit, we are committed to delivering high-quality, scalable solutions that meet the evolving needs of modern businesses.
+
+              Join us on our journey to revolutionize sales support and automation, one intelligent solution at a time.
             </Information>
             <FocusData>
-              <FocusButton href="#" theTextInside={"Curriculum"} />
-              <FocusButton href="#" theTextInside={"GitHub"} />
-              <FocusButton href="#" theTextInside={"Linkedin"} />
+              <FocusButton href="https://github.com/TryHardLearning" target="_blank" theTextInside={"GitHub"} />
+              <FocusButton href="https://www.linkedin.com/in/lucas-c-bresolino/" target="blank" theTextInside={"Linkedin"} />
+              <FocusButton href="https://wa.me/46988301339" theTextInside={"WhatsApp"} />
             </FocusData>
           </Left>
           <Right>
