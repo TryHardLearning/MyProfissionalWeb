@@ -13,10 +13,15 @@ export default function Header() {
     align-items: center;
   `;
   const Logo = styled.div`
-    width: 60px;
-    height: 60px;
     transition: 0.6s;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    &:hover{
+      color: var(--primary)
+    }
   `;
   const LogoImg = styled.img`
     width: 60px;
@@ -40,8 +45,8 @@ export default function Header() {
     color: #fff;
     height: 100px;
     text-transform: capitalize;
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 300;
+    font-size: 17px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -56,40 +61,39 @@ export default function Header() {
   const NavMenu = styled.ul`
     display: flex;
   `;
+  const LogoText = styled.h1`
+    font-size: 3rem; /* Aumentado o tamanho do logo */
+    margin-left: 1rem;
+  `;
 
   return (
     <MainContainer>
       <Logo>
         <LogoImg src={myLogo} alt="" />
+        <LogoText className="logo fw500">ArchSoftware</LogoText>
       </Logo>
       <Menu>
         <NavMenu>
           <MenuItem className="active">
-            <MenuLink href="">Home</MenuLink>
+            <MenuLink href="#banner">Home</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">About Us</MenuLink>
+            <MenuLink href="#aboutus">About Us</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">Services</MenuLink>
+            <MenuLink href="#services">Services</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">Our Projects</MenuLink>
+            <MenuLink href="#projects">Our Projects</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">Our Team</MenuLink>
+            <MenuLink href="#ourteam">Our Team</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">Happy Client</MenuLink>
+            <MenuLink href="#workwithus">Experience</MenuLink>
           </MenuItem>
           <MenuItem className="active">
-            <MenuLink href="">Price</MenuLink>
-          </MenuItem>
-          <MenuItem className="active">
-            <MenuLink href="">Some Facts</MenuLink>
-          </MenuItem>
-          <MenuItem className="active">
-            <MenuLink href="">Contact Us</MenuLink>
+            <MenuLink href="#contactus">Contact Us</MenuLink>
           </MenuItem>
         </NavMenu>
       </Menu>
