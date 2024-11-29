@@ -8,9 +8,9 @@ export default function Button({theTextInside, href}) {
         background-color: #000;
         color: var(--primary);
         text-transform: capitalize;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         text-decoration: none;
-        padding: 1rem 3rem;
+        padding: 1.3rem 3.3rem;
         margin-top: 2rem;
         border-radius: 8px;
         transition: 1.1s;
@@ -21,6 +21,6 @@ export default function Button({theTextInside, href}) {
         }
     `
     return (
-        <TheButton href={href}>{theTextInside}</TheButton>
+        <TheButton href={href} target="_blank" >{theTextInside}</TheButton>
     )
 }

@@ -21,6 +21,6 @@ export default function FocusButton({theTextInside, href}) {
         }
     `
     return (
-        <TheButton href={href}>{theTextInside}</TheButton>
+        <TheButton href={href} target="_blank">{theTextInside}</TheButton>
     )
 }
