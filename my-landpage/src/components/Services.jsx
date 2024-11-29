@@ -19,15 +19,15 @@ export default function Services() {
   const Title = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 600;
   `;
   const Description = styled.div`
     text-align: center;
     text-transform: capitalize;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 600;
-    color: #ccc;
+    color: #a0a0a0;
     margin-top: 1.3rem;
     margin-bottom: 4.5rem;
   `;
@@ -59,8 +59,8 @@ export default function Services() {
     margin-top: 2rem;
     text-transform: capitalize;
     font-size: 1.6rem;
-    font-weight: 600;
-    color: #000;
+    font-weight: 300;
+    color: #fff;
   `;
   const Tecnology = styled.p`
     margin-top: 1rem;
@@ -69,35 +69,35 @@ export default function Services() {
   `;
 
   return (
-    <DefaultContainer>
+    <DefaultContainer id="services">
       <Title>Services</Title>
       <Description>Services that we provide</Description>
       <Body>
         <Services>
           <AsService>
             <ImgTecnologyLogo src={FrontendImage} />
-            <TecnologyArea>Fontend</TecnologyArea>
-            <Tecnology>HTML-CSS Javascript NextJs NodeJs</Tecnology>
+            <TecnologyArea>Artificial Intelligence Chatbot</TecnologyArea>
+            <Tecnology>GPT - LLaMA - Python</Tecnology>
+          </AsService>
+          <AsService>
+            <ImgTecnologyLogo src={MobiledImage} />
+            <TecnologyArea>ERP with Artificial Intelligence</TecnologyArea>
+            <Tecnology>GPT - LLaMA - Python</Tecnology>
           </AsService>
           <AsService>
             <ImgTecnologyLogo src={BackendImage} />
             <TecnologyArea>Backend</TecnologyArea>
-            <Tecnology>NodeJs Golang Python</Tecnology>
-          </AsService>
-          <AsService>
-            <ImgTecnologyLogo src={MobiledImage} />
-            <TecnologyArea>Mobile</TecnologyArea>
-            <Tecnology>Flutter Ionic</Tecnology>
+            <Tecnology>NodeJs Golang C# Java</Tecnology>
           </AsService>
           <AsService>
             <ImgTecnologyLogo src={DatabaseImage} />
             <TecnologyArea>Database</TecnologyArea>
-            <Tecnology>PostgreSQL Firebase</Tecnology>
+            <Tecnology>PostgreSQL MongoDB SQL-Server Firebase</Tecnology>
           </AsService>
           <AsService>
             <ImgTecnologyLogo src={ClouldImage}/>
             <TecnologyArea>Cloud</TecnologyArea>
-            <Tecnology>Google Cloud AWS</Tecnology>
+            <Tecnology>Google Cloud Platform AWS</Tecnology>
           </AsService>
         </Services>
       </Body>
